@@ -6,5 +6,5 @@
 class IBaseConvertor
 {
 public:
-	virtual int ConvertBases(const std::string& source, ITwoWayMap<char, int>& sourceCharacters, const std::string& dest, ITwoWayMap<char, int>& destCharacters, std::string* result) = 0;
+	virtual int ConvertBases(std::string& source, ITwoWayMap<char, int>& sourceCharacters, ITwoWayMap<char, int>& destCharacters, std::string* result) = 0;
 };
