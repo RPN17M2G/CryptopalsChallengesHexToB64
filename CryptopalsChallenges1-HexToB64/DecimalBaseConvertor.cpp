@@ -16,6 +16,7 @@ int DecimalBaseConvertor::ConvertString(std::string& sourceStream, unsigned int*
 			*result += (int)(baseCharacters.GetValueByKey(character) * pow(base, i));
 		}
 		catch (std::exception e) {
+			*result = 0;
 			return FAILURE_CODE;
 		}
 		
@@ -30,6 +31,7 @@ int DecimalBaseConvertor::ConvertInt(unsigned int decimalValue, std::string* res
 			result->append(std::to_string(baseCharacters.GetKeyByValue(decimalValue % base)));
 		}
 		catch (std::exception e) {
+			*result = "";
 			return FAILURE_CODE;
 		}
 
