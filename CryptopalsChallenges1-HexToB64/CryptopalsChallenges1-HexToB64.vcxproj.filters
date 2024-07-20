@@ -18,5 +18,25 @@
     <ClCompile Include="CryptopalsChallenges1-HexToB64.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BaseConvertor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IBaseConvertor.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecimalBaseConvertor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseConvertor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DecimalBaseConvertor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ITwoWayMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

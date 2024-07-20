@@ -128,6 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CryptopalsChallenges1-HexToB64.cpp" />
+    <ClCompile Include="BaseConvertor.cpp" />
+    <ClCompile Include="DecimalBaseConvertor.cpp" />
+    <ClCompile Include="IBaseConvertor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseConvertor.h" />
+    <ClInclude Include="DecimalBaseConvertor.h" />
+    <ClInclude Include="ITwoWayMap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

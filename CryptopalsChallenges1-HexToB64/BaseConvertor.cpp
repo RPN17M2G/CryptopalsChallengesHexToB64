@@ -1,11 +1,11 @@
-#include "HexToIntConvertor.h"
+#include "BaseConvertor.h"
 #include <iostream>
 
-HexToIntConvertor::HexToIntConvertor()
+BaseConvertor::BaseConvertor()
 {
 }
 
-int HexToIntConvertor::ConvertString(std::string& hexStream, int* result)
+int BaseConvertor::ConvertString(std::string& hexStream, int* result)
 {
 	int result = 0;
 	char character;
@@ -20,4 +20,9 @@ int HexToIntConvertor::ConvertString(std::string& hexStream, int* result)
 		
 	}
 	return SUCCESS_CODE;
+}
+
+int BaseConvertor::ConvertTo(const std::string& source, const ITwoWayMap<char, int>& sourceCharacters, const std::string& dest, const ITwoWayMap<char, int>& destCharacters, std::string* result)
+{
+	return 0;
 }

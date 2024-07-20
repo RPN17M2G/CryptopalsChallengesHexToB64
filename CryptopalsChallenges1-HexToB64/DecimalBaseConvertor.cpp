@@ -4,16 +4,41 @@ DecimalBaseConvertor::DecimalBaseConvertor()
 {
 }
 
-int DecimalBaseConvertor::ConvertString(std::string& sourceStream, int* result, int base)
+int DecimalBaseConvertor::ConvertString(std::string& sourceStream, unsigned int* result, int base, ITwoWayMap<char, int>& baseCharacters)
 {
-	int result = 0;
+	int sum = 0;
 	char character;
 
 	for (int i = 0; i < sourceStream.length(); ++i) {
 		character = sourceStream.at(i);
-
-
+		
+		try {
+			*result += (int)(baseCharacters.GetValueByKey(character) * pow(base, i));
+		}
+		catch (std::exception e) {
+			return FAILURE_CODE;
+		}
+		
 	}
 	return SUCCESS_CODE;
 }
+
+int DecimalBaseConvertor::ConvertInt(unsigned int decimalValue, std::string* result, int base, ITwoWayMap<char, int>& baseCharacters)
+{
+	while (decimalValue > 0) {
+		try {
+			result->append(std::to_string(baseCharacters.GetKeyByValue(decimalValue % base)));
+		}
+		catch (std::exception e) {
+			return FAILURE_CODE;
+		}
+
+		decimalValue /= base;
+	}
+
+	return SUCCESS_CODE;
+}
+
+
+
 
